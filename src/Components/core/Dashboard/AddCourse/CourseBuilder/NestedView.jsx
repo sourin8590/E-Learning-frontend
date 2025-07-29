@@ -1,14 +1,11 @@
-import React from 'react'
-import {useSelector, useDispatch} from 'react-redux'
-import { VscAdd, VscEdit } from 'react-icons/vsc';
-import { VscTrash } from 'react-icons/vsc';
-import { VscTriangleDown } from 'react-icons/vsc';
 import { useState } from 'react';
-import ConfirmationModal from ".././../../.././common/ConfirmationModal"
-import SubSectionModal from './SubsectionModal';
+import { RxDropdownMenu } from 'react-icons/rx';
+import { VscAdd, VscEdit, VscTrash, VscTriangleDown } from 'react-icons/vsc';
+import { useDispatch, useSelector } from 'react-redux';
 import { deleteSection, deleteSubSection } from '../../../../../services/operations/courseDetailsAPI';
 import { setCourse } from '../../../../../slices/courseSlice';
-import {RxDropdownMenu} from 'react-icons/rx'
+import ConfirmationModal from ".././../../.././common/ConfirmationModal";
+import SubSectionModal from './SubsectionModal';
 const NestedView = ({handelChangeEditSectionName}) => {
     const {token} = useSelector(state => state.auth);
     const {course} = useSelector(state => state.course);

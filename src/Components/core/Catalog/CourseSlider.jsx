@@ -1,13 +1,12 @@
-import React from 'react'
 
-import {Swiper, SwiperSlide} from "swiper/react"
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import "react-loading-skeleton/dist/skeleton.css"
+import { FreeMode, Keyboard, Mousewheel, Navigation, Pagination } from 'swiper'
 import "swiper/css"
 import "swiper/css/free-mode"
+import "swiper/css/navigation"
 import "swiper/css/pagination"
-import "swiper/css/navigation";
-import { Autoplay,FreeMode,Navigation, Pagination,Mousewheel, Keyboard}  from 'swiper'
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
-import "react-loading-skeleton/dist/skeleton.css";
+import { Swiper, SwiperSlide } from "swiper/react"
 
 import CatalogCard from './CatalogCard'
 

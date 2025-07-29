@@ -1,20 +1,15 @@
-import React, { useState } from "react";
-import logo from "../../assets/Logo/Logo-Full-Light.png";
-import { Link, matchPath } from "react-router-dom";
-import { NavbarLinks } from "../../data/navbar-links";
-import { useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { TiShoppingCart } from "react-icons/ti";
-import ProfileDropDown from "../core/Auth/ProfileDropDown";
-import { categories } from "../../services/apis";
-import { apiConnector } from "../../services/apiConnector";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useRef } from "react";
 import { HiSearch } from "react-icons/hi";
+import { TiShoppingCart } from "react-icons/ti";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
-import axios from "axios";
+import { Link, matchPath, useLocation } from "react-router-dom";
+import logo from "../../assets/Logo/Logo-Full-Light.png";
+import { NavbarLinks } from "../../data/navbar-links";
+import { apiConnector } from "../../services/apiConnector";
+import { categories } from "../../services/apis";
+import ProfileDropDown from "../core/Auth/ProfileDropDown";
 
 const NavBar = ({ setProgress }) => {
   const dispatch = useDispatch();

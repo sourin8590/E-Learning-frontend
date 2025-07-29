@@ -1,20 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { useState } from "react";
+import toast from "react-hot-toast";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  createSection,
+  updateSection,
+} from "../../../../../services/operations/courseDetailsAPI";
 import {
   setCourse,
   setEditCourse,
   setStep,
 } from "../../../../../slices/courseSlice";
 import NestedView from "./NestedView";
-import toast from "react-hot-toast";
-import {
-  createSection,
-  updateSection,
-} from "../../../../../services/operations/courseDetailsAPI";
 
 const CourseBuilderForm = () => {
   const { token } = useSelector((state) => state.auth);
